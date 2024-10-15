@@ -6,7 +6,7 @@
 /*   By: jonathaneberle <jonathaneberle@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 10:34:47 by jonathanebe       #+#    #+#             */
-/*   Updated: 2024/10/15 12:34:00 by jonathanebe      ###   ########.fr       */
+/*   Updated: 2024/10/15 12:40:27 by jonathanebe      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ func main() {
 	fmt.Println(futureRealValue)
 }
 
-func calc_results(investmentAmount, expectedReturnRate, years float64) (float64, float64) {
+func calc_results(investmentAmount, expectedReturnRate, years float64) (fv float64, frv float64) {
 
-	fv := investmentAmount * math.Pow(1 + expectedReturnRate / 100, years)
-	frv := fv / math.Pow(1 + inflationRate/100, years)
+	fv = investmentAmount * math.Pow(1 + expectedReturnRate / 100, years)
+	frv = fv / math.Pow(1 + inflationRate/100, years)
 	return fv, frv
 }
