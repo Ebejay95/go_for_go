@@ -1,0 +1,33 @@
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!README.md
+!*.go
+!go.mod
+
+# ...even if they are in subdirectories
+!*/
+
+# If you have subdirectories you want to completely ignore, add them here
+# /some_directory_to_ignore/
+
+# Ignore go build and test files
+*.test
+*.out
+
+# Ignore IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ignore OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
